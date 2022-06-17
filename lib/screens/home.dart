@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:jason/models/User.dart';
+//import 'package:jason/models/User.dart';
 import 'package:jason/models/User2.dart';
 
 class HomePage extends StatefulWidget {
@@ -72,7 +72,16 @@ class _HomePageState extends State<HomePage> {
             child: ListTile(
               title: Text("${e.isim}"),
               subtitle: Text("${e.soyisim}"),
-              trailing: Text("${e.isim}", style: TextStyle(backgroundColor: Colors.amber),),
+              trailing: ElevatedButton(
+                onPressed: (){
+
+                }, 
+                child: Text("${e.isim}", 
+                    style: TextStyle(
+                      backgroundColor: Colors.amber
+                    ),
+                )
+              ),
             ),
           )).toList(),
       )
